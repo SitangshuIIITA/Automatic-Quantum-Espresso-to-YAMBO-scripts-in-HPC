@@ -25,7 +25,6 @@ cd ../QE_RUN
 
 	# Choose which task you want to do from the above 5 lines. Comment them if you do not need.
 
-#		sed -i -e "1,${countvar}d" *.sh
 
 cd ../YAM_RUN
 		sh yambo_dft_bnd_struc.sh				#calculates DFT band structure using yambo interpolator.
@@ -54,9 +53,6 @@ cd ../YAM_RUN
 
 #		sh bse_temp_slepc.sh                                    #BSE Temperature calculation using slepC  solver
 	
-#		sed -i -e "1,${countvar}d" *.sh
-
-		
 
 
 cd ..
