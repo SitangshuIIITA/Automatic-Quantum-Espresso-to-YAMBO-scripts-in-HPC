@@ -25,14 +25,15 @@ Here I mention below the working procedures:
 2. Now copy these lines and open QE_input_file.sh inside \core_files directory. Delete lines 5-15 and paste the headers here also.
 
 Save the file and close it.
-
 #################################################################################
+
 Quantum Espresso DFT input script generation: This section will take care of "relax", "scf" (both with and without spin-orbit calculation), "nscf" and "bands (with orbitals)" calculations automatically.
 
 1. In the QE_input_file.sh file, change only lines 35-67 as per your input. Don't Change anything else.
 2. Scroll down and change line 82-85. Dont delete "|". Maintain the format.
 
 ##################################################################################
+
 Assigning variables for HPC processors & Quantum Espresso:
 
 1. Open QE_variables.sh file inside /core_files/QE_VAR directory.
