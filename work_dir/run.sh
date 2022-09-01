@@ -13,11 +13,11 @@ set +a
 
 cd ../QE_RUN
 
-		sh QE_relax.sh						#calculates energy/geometry minimization/relax.
+#		sh QE_relax.sh						#calculates energy/geometry minimization/relax.
 
-		sh QE_scf.sh						#calculates scf (both with spin and no-spin)	
+#		sh QE_scf.sh						#calculates scf (both with spin and no-spin)	
 
-		sh QE_nscf.sh						#calculates non self consistent part
+#		sh QE_nscf.sh						#calculates non self consistent part
 
 #		sh QE_bands.sh						#calculates bands using QE band interpolator
 
@@ -27,13 +27,13 @@ cd ../QE_RUN
 
 
 cd ../YAM_RUN
-		sh yambo_dft_bnd_struc.sh				#calculates DFT band structure using yambo interpolator.
+#		sh yambo_dft_bnd_struc.sh				#calculates DFT band structure using yambo interpolator.
 
-		sh hf.sh						#Hartree-Fock energy computation.
+#		sh hf.sh						#Hartree-Fock energy computation.
 
-		sh gw.sh						#GW calculation (includes self-consistent GW)
+#		sh gw.sh						#GW calculation (includes self-consistent GW)
 
-		sh bse_gw.sh						#BSE+GW calculation
+#		sh bse_gw.sh						#BSE+GW calculation
 
 #		sh wf_exciton.sh					#exciton wavefunction/amplitude, etc.
 
