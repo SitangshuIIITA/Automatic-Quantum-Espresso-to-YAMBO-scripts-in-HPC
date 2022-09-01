@@ -15,6 +15,7 @@ Note: There are lareg number of file exchange that is going to take place once y
 
 1. Use this for only Yambo version 5.1.0, 5.1.1.
 2. This will work only with 2D single layers.
+3. You should be fully aware of recent QE and Yambo variables. 
 
 
 Here I mention below the working procedures:
