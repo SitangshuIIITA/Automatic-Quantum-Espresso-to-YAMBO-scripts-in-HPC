@@ -14,14 +14,14 @@
 
 Save the file and close it.
 
-#####Quantum Espresso DFT input script generation: 
+#### Quantum Espresso DFT input script generation: 
 This section will take care of "relax", "scf" (both with and without spin-orbit calculation), "nscf (by default (both with spin-orbit calculation)" and "bands (with orbitals)" calculations automatically.
 
 1. In the QE_input_file.sh file, change only lines 35-67 as per your input. Don't Change anything else.
 2. Scroll down and change line 82-85. Dont delete "|". Maintain the format.
 
 
-Assigning variables for HPC processors & Quantum Espresso:
+#### Assigning variables for HPC processors & Quantum Espresso:
 
 1. Open QE_variables.sh file inside /core_files/QE_VAR directory.
 2. Modify line 11 by setting QE path.
@@ -32,16 +32,15 @@ Assigning variables for HPC processors & Quantum Espresso:
 
 Save the file and close it.
 
-
-Assigning variables for parallel cpus & YAMBO v5.1:
+#### Assigning variables for parallel cpus & YAMBO v5.1:
 
 1. Open yambo_variables.sh file inside /core_files/YAM_VAR directory.
 2. Modify lines 6-7 & 14-17 without renaming the arguements.
 3. Modify the subsequent list of yambo variables. Do not change the arguements.
 
------------------------- Done-----------------------------------------------------
+#### -------------------------------------------------------- Done ----------------------------------------------------------------------
 
-Now run the files:
+#### Now run the files:
 
 1. Run the script initialize.sh only once from your terminal. This will add the headers in all of your input *.sh scripts. For example check the /core_files/QE_RUN/QE_relax.sh file.
 2. The directory "work_dir" is the place where all your files and folders will get generated.
@@ -55,4 +54,4 @@ Do let me know, if any query is there: sitangshu@iiita.ac.in
 Webpage: https://profile.iiita.ac.in/sitangshu/
 
 
------------------------- That's all folks------------------------------------------
+#### ------------------------------------------------ That's all folks Enjoy! ---------------------------------------------------------
