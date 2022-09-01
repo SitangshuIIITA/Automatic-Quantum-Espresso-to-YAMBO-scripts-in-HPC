@@ -60,7 +60,7 @@ Now run the files:
 5. To get GW, BSE, temperature dependent BSE, exciton dispersion, etc. uncomment lines 30-54 either at one shot or one by one.
 6. The resulted data files will be all located inside "\work_dir\graph_data\". 
 
-Do let me know, if any query is there: sitangshu@iiita.ac.in
+Do let me know, if any query is there: sitangshu@iiita.ac.in https://profile.iiita.ac.in/sitangshu/
 
 
 ------------------------ That's all folks------------------------------------------
