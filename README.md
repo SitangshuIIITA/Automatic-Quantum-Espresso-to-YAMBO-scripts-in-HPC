@@ -10,7 +10,7 @@ without losing much time in between consecutive flows.
 The folder names are compatible also to the yambopy process-flow. The script "get_qlist.py" and "elph.sh" are from Yambo tutorials, with additional modifications from my side.
 
 
-This automatic folder contains two directories (core_files & work_dir) and one file (initialize.sh). The directory "work_dir" is the place where all your files and folders will get generated. Core_files contains the various run and variable declaration scripts. 
+This automatic folder contains two directories (core_files & work_dir) and one file (initialize.sh). The directory "work_dir" is the place where all your files and folders will get generated and is the $DIR. Core_files contains the various run and variable declaration scripts. 
 Note: There are large number of file exchanges that is going to take place once you run the script. So, carefully read the followings:  
 
 1. Use this for only Yambo version 5.1.0, 5.1.1.
