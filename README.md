@@ -39,7 +39,7 @@ Save the file and close it.
 2. Modify lines 6-7 & 14-17 without renaming the arguements.
 3. Modify the subsequent list of yambo variables. Do not change the arguements.
 
-#### -------------------------------------------------------- Done ----------------------------------------------------------------------
+#### ----------------------------------------- Done ------------------------------------------------
 
 #### Now run the files:
 
@@ -55,4 +55,4 @@ Do let me know, if any query is there: sitangshu@iiita.ac.in
 Webpage: https://profile.iiita.ac.in/sitangshu/
 
 
-#### ------------------------------------------------ That's all folks Enjoy! ------------------------------------------------------------
+#### ------------------------------ That's all folks Enjoy! ------------------------------------------
