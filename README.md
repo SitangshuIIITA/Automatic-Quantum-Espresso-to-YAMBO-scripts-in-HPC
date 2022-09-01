@@ -52,8 +52,8 @@ Save the file and close it.
 
 Do let me know, if there is any query, I am at: 
 
-Department of Electronics and Communication Engineering
-Indian Institute of Information Technology-Allahabad
+1. Department of Electronics and Communication Engineering
+2. Indian Institute of Information Technology-Allahabad
 Uttar Pradesh 211015
 India
 Email: sitangshu@iiita.ac.in 
