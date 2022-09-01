@@ -57,7 +57,8 @@ Now run the files:
 2. The directory "work_dir" is the place where all your files and folders will get generated.
 3. Put your pseudopotentials inside "/pseudo" directory.
 4. In the run.sh script, the chronological process flow are written. Run the run.sh script by uncommenting lines 16-24 either in one shot or one by one. You will see the QE DFT results have generated.
-5. To get GW, BSE, temperature dependent BSE, excitos band structure, etc. uncomment lines 30-54 either at one shot or one by one.
+5. To get GW, BSE, temperature dependent BSE, exciton dispersion, etc. uncomment lines 30-54 either at one shot or one by one.
 6. The resulted data files will be all located inside "\work_dir\graph_data\". 
 
+Do let me know, if any query is there are sitangshu@iiita.ac.in
 ------------------------ That's all folks------------------------------------------
