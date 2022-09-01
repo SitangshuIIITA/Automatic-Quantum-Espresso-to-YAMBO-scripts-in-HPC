@@ -7,7 +7,7 @@ This is an automatic set of scripts that does all the computations at one shot.
 This is an automatic version 1.0 running script for YAMBO v5.1. I have tried to make this 
 in a super easy format, so that anyone can run these lengthy and cascaded process-flow 
 without losing much time in between consecutive flows.  
-The folder names are compatible also to the yambopy process-flow. The script "get_qlist.py" and "elph.sh" are from Yambo tutorials, with some aditional modifications from my side.
+The folder names are compatible also to the yambopy process-flow. The script "get_qlist.py" and "elph.sh" are from Yambo tutorials, with additional modifications from my side.
 
 
 The folder contains two directories (core_files & work_dir) and one file (initialize.sh). The directory "work_dir" is the place where all your files and folders will get generated. Core_files contains the various run and variable declaration scripts. 
