@@ -7,7 +7,8 @@
 <p style='text-align: justify;'>This is my automatic version 1.0 running script for YAMBO v5.1. I have tried to write the flow in a super easy format, so that anyone can run these lengthy and cascaded without losing much time in between consecutive flows. The folder names are compatible also to the yambopy process-flow. The script "get_qlist.py" and "elph.sh" are from Yambo tutorials, with additional modifications from my side.</p>
 
 <p style='text-align: justify;'>There are main two directories (core_files & work_dir) and one file (initialize.sh). The directory "work_dir" is the place where all your files and folders will get generated and is the $DIR. Core_files contains the various run and variable declaration scripts. 
-*Note*: There are large number of file exchanges that is going to take place once you run the script. So, carefully read the following working procedures:</p>  
+
+Note: There are large number of file exchanges that is going to take place once you run the script. So, carefully read the following working procedures:</p>  
 
 1. Open initialize.sh script and change lines 2-12 as per you declare your HPC headers. Dont forget to load modules here.
 2. Now copy these lines and open QE_input_file.sh inside \core_files directory. Delete lines 5-15 and paste the headers here also.
