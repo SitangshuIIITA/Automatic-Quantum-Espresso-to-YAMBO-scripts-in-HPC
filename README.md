@@ -25,7 +25,7 @@ Here I mention below the working procedures:
 
 Save the file and close it.
 
-Quantum Espresso DFT input script generation: This section will take care of "relax", "scf" (both with and without spin-orbit calculation), "nscf" and "bands (with orbitals)" calculations automatically.
+Quantum Espresso DFT input script generation: This section will take care of "relax", "scf" (both with and without spin-orbit calculation), "nscf (by default (both with spin-orbit calculation)" and "bands (with orbitals)" calculations automatically.
 
 1. In the QE_input_file.sh file, change only lines 35-67 as per your input. Don't Change anything else.
 2. Scroll down and change line 82-85. Dont delete "|". Maintain the format.
