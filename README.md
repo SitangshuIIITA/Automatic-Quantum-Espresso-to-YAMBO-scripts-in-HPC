@@ -54,4 +54,4 @@ Do let me know, if any query is there: sitangshu@iiita.ac.in
 Webpage: https://profile.iiita.ac.in/sitangshu/
 
 
-#### ------------------------------------------------ That's all folks Enjoy! ---------------------------------------------------------
+#### ------------------------------------------------ That's all folks Enjoy! ------------------------------------------------------------
