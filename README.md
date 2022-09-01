@@ -37,7 +37,7 @@ Assigning variables for HPC processors & Quantum Espresso:
 2. Modify line 11 by setting QE path.
 3. Modify line 13 by replacing "mpiexec.hydra -ppn 40 -f $DIR/nodes". Note that in most HPC jobs, node file is generated.
 4. Modify the number of processors in line 15-19.
-5.Modify similarly lines 22-25.
+5. Modify similarly lines 22-25.
 6. The QE variables can now be easliy set in lines 29-47. Do not modify the space in line 41. 
 
 Save the file and close it.
