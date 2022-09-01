@@ -51,13 +51,12 @@ Save the file and close it.
 6. The resulted data files will be all located inside "\work_dir\graph_data\". 
 
 Do let me know, if there is any query, I am at: 
-
-1. Department of Electronics and Communication Engineering
-2. Indian Institute of Information Technology-Allahabad
-Uttar Pradesh 211015
-India
-Email: sitangshu@iiita.ac.in 
-Webpage: https://profile.iiita.ac.in/sitangshu/
+  Department of Electronics and Communication Engineering
+  Indian Institute of Information Technology-Allahabad
+  Uttar Pradesh 211015
+  India
+  Email: sitangshu@iiita.ac.in 
+  Webpage: https://profile.iiita.ac.in/sitangshu/
 
 
 #### ------------------------------ That's all folks Enjoy! ------------------------------------------
