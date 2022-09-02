@@ -1,5 +1,5 @@
 ## Automatic-Quantum-Espresso-to-YAMBO-scripts
-### These are automatic set of scripts that does all the exciton-driven optical absorption computations at one shot in an high performance cluster.
+### These are automatic set of scripts that does all the exciton-driven optical absorption computations at one shot in a high performance cluster.
 - Use this for only Yambo version 5.1.0, 5.1.1.
 - Right now this works only with 2D single layers.
 - You should be fully aware of recent QE and Yambo variables. 
