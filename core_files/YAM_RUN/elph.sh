@@ -142,7 +142,7 @@ EOF
 				cd nscf
 				cat ../../nscf/$NSCF_FILE > $NSCF_FILE
 				echo "$K_GRID 0 0 0 " >> $NSCF_FILE
-				cp -r ../../scf_nonsoc/$PREFIX.save ./
+				cp -r ../../scf_soc/$PREFIX.save ./
 				echo "Running NSCF ... "
 				$PW_RUN -inp $NSCF_FILE > output_nscf                                                         
        				awk /parameter/ output_nscf > 1
