@@ -6,7 +6,7 @@
 
 <p style='text-align: justify;'>This is my automatic version 1.0 running script for YAMBO v5.1. I have tried to write the flow in a super easy format, so that anyone can run these lengthy and cascaded consecutive flows without losing much time in between. The folder names are compatible also to the yambopy process-flow. The script "get_qlist.py" and "elph.sh" are from Yambo tutorials, with additional modifications from my side.</p>
 
-<p style='text-align: justify;'>There are mainly two directories: core_files & work_dir , and one file: initialize.sh. The directory "work_dir" is the place where all your files and folders will get generated and is the $DIR. Core_files contains the various run and variable declaration scripts. 
+<p style='text-align: justify;'>There are mainly two directories: core_files & work_dir , and one file: initialize.sh. The "work_dir" is your current working directory and is the place where all your files and folders will get generated. This is named as $DIR. Do not change this anywhere in the script. Core_files contains the various run and variable declaration scripts. 
 
 Note: There are large number of file exchanges that is going to take place once you run the script. So, carefully read the following working procedures:</p>  
 
