@@ -1,7 +1,7 @@
 ## Automatic-Quantum-Espresso-to-YAMBO-scripts
 ### These are automatic set of scripts that does all the exciton-driven optical absorption computations at one shot in a high performance cluster :)
-- Use this for only Yambo version 5.1.0, 5.1.1.
-- Right now this works only with 2D single layers.
+- Use this for only Yambo version 5.1.0, 5.1.1., as of now.
+- Right now this works only with 2D single layers. I will update for bulk also.
 - You should be fully aware of recent QE and Yambo variables. 
 
 <p style='text-align: justify;'>This is my automatic version 1.0 running script for YAMBO v5.1. I have tried to write the flow in a super easy format, so that anyone can run these lengthy and cascaded without losing much time in between consecutive flows. The folder names are compatible also to the yambopy process-flow. The script "get_qlist.py" and "elph.sh" are from Yambo tutorials, with additional modifications from my side.</p>
