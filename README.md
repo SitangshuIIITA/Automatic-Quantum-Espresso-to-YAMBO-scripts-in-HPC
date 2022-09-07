@@ -43,7 +43,7 @@ Save the file and close it.
 
 #### Now run the files:
 
-1. Run the script initialize.sh only once from your HPC. This will add the headers in all of your input *.sh scripts. For example, check the /core_files/QE_RUN/QE_relax.sh file.
+1. Run the script initialize.sh only once from your HPC. This will add the headers in all of your input *.sh scripts located inside QE_RUN and YAM_RUN. For example, check now the /core_files/QE_RUN/QE_relax.sh file. Your HPC headers should exactly appear here.
 2. The directory "work_dir" is the place where all your files and folders will get generated.
 3. Put your pseudopotentials inside "/pseudo" directory.
 4. Go to the work_dir. In the run.sh script, the chronological process flow is written. Run the run.sh script in your HPC by uncommenting the QE lines like QE_relax.sh, etc. either in one shot or one by one. You will see the QE DFT results have generated. Maintain the sequentiality of the jobs. Do not play randomly.
