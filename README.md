@@ -37,7 +37,7 @@ Save the file and close it.
 
 1. Open yambo_variables.sh file inside /core_files/YAM_VAR directory.
 2. Modify lines 6-7 & 14-17 without modifying/renaming the arguements.
-3. Modify the subsequent list of yambo variables. Do not change the arguements.
+3. Modify the subsequent list of yambo variables. Do not change the arguement names.
 
 #### ----------------------------------------- Done ------------------------------------------------
 
