@@ -46,8 +46,8 @@ Save the file and close it.
 1. Run the script initialize.sh only once from your HPC. This will add the headers in all of your input *.sh scripts. For example, check the /core_files/QE_RUN/QE_relax.sh file.
 2. The directory "work_dir" is the place where all your files and folders will get generated.
 3. Put your pseudopotentials inside "/pseudo" directory.
-4. Go to the /core_files/work_dir. In the run.sh script, the chronological process flow is written. Run the run.sh script in your HPC by uncommenting lines 16-24 either in one shot or one by one. You will see the QE DFT results have generated. Maintain the sequentiality of the jobs. Do not play randomly.
-5. To get GW, BSE, temperature dependent BSE, exciton dispersion, etc. uncomment lines 30-54 either at one shot or one by one. Maintain the sequentiality of the jobs. Do not play randomly.
+4. Go to the work_dir. In the run.sh script, the chronological process flow is written. Run the run.sh script in your HPC by uncommenting the QE lines like QE_relax.sh, etc. either in one shot or one by one. You will see the QE DFT results have generated. Maintain the sequentiality of the jobs. Do not play randomly.
+5. Similarly, to get the GW, BSE, temperature dependent BSE, exciton dispersion, etc., uncomment the yambo lines like yambo_dft_band_struc.sh, etc. either at one shot or one by one. Maintain the sequentiality of the jobs. Do not play randomly.
 6. All the resulted data files will be located inside the "\work_dir\graph_data\" folder. Use them for a nice plot! :) 
 
 
