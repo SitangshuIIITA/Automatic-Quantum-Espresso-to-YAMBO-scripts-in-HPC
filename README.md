@@ -49,7 +49,7 @@ Save the file and close it.
 3. Put your pseudopotentials inside "/pseudo" directory.
 4. Go to the work_dir. In the run.sh script, the chronological process flow is written. Run the run.sh script in your HPC by uncommenting the QE shell script lines like QE_relax.sh, etc., either in one shot or one by one. You will see the QE DFT results have generated. Maintain the sequentiality of the jobs. Do not play randomly.
 5. Similarly, to get the GW, BSE, temperature dependent BSE, exciton dispersion, etc., uncomment the yambo shell script lines like yambo_dft_band_struc.sh, etc. either at one shot or one by one. Maintain the sequentiality of the jobs. Do not play randomly.
-6. The python script "lin_reg.py" inside "/work_dir" is used during GW calculations to perform regression on GW data. Look into the GW_folder (after running gw.sh) and you will find slopes for conduction and valence data sets.
+6. The python script "lin_reg.py" inside "/work_dir" is used during GW calculations to perform regression on GW data. Look into the GW_folder (after running gw.sh) and you will find slopes for conduction and valence data sets. These will be used in subsequent BSE scissor calculations.
 6. All the resulted data files will be located inside the "\work_dir\graph_data\" folder. Use them for a nice plot! :) 
 
 
