@@ -16,11 +16,12 @@ Note: There are large number of file exchanges that is going to take place once 
 
 Save the file and close it.
 
-#### Quantum Espresso DFT input script generation: 
+#### Quantum Espresso (QE) DFT input script generation: 
 This section will take care of "relax", "scf" (both with and without spin-orbit calculation), "nscf (by default (both with spin-orbit calculation)" and "bands (with orbitals)" calculations automatically.
 
 1. In the QE_input_file.sh file, change only lines 35-67 as per your input. You may add other QE flags also. 
 2. Scroll down and change line 82-85. Dont delete "|". Maintain the format.
+3. A successful run will generate, for example, folder "relax" with *.relax, relax.out, *.xml and "*.save" directory.
 
 
 #### Assigning variables for HPC processors & Quantum Espresso:
