@@ -44,7 +44,7 @@ Save the file and close it.
 #### Now run the files:
 
 1. Run the script initialize.sh only once from your HPC. This will add the headers in all of your input *.sh scripts located inside QE_RUN and YAM_RUN. For example, check now the /core_files/QE_RUN/QE_relax.sh file. Your HPC headers should exactly appear here.
-2. The directory "work_dir" is the place where all your files and folders will get generated. A successful environment/HPC header declaration run will generate, for example, folder "relax" with *.relax, relax.out, *.xml and "*.save" directory. 
+2. The directory "work_dir" is the place where all your files and folders will get generated. A successful environment/HPC header declaration run will generate, for example, folder "relax" with *.relax, relax.out, *.xml and "*.save" directory inside it. 
 3. Put your pseudopotentials inside "/pseudo" directory.
 4. Go to the work_dir. In the run.sh script, the chronological process flow is written. Run the run.sh script in your HPC by uncommenting the QE shell script lines like QE_relax.sh, etc., either in one shot or one by one. You will see the QE DFT results have generated. Maintain the sequentiality of the jobs. Do not play randomly. 
 5. Similarly, to get the GW, BSE, temperature dependent BSE, exciton dispersion, etc., uncomment the yambo shell script lines like yambo_dft_band_struc.sh, etc. either at one shot or one by one. Maintain the sequentiality of the jobs. Do not play randomly.
