@@ -1,15 +1,3 @@
-#!/bin/bash
-#PBS -u sitangshu
-#PBS -N sitangshu
-#PBS -q core160
-#PBS -o out.log
-#PBS -l nodes=4:ppn=40
-#PBS -j oe
-#PBS -V
-     cd $PBS_O_WORKDIR
-        module load compilers/intel/parallel_studio_xe_2018_update3_cluster_edition
-        module load compilers/gcc-7.5.0
-     cat $PBS_NODEFILE |uniq > nodes
 
 
 	mkdir GW_folder
