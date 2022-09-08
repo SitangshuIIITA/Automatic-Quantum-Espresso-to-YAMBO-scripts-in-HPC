@@ -22,8 +22,6 @@ print("Intercept is ", float(b0),"Coefficeint is ",float(b1))
 with open('slope_v.txt', 'w') as f:
          f.write("%f" % float(b1))
 
-y_pred=b0+b1*x
-
 
 ############### conduction plot ##########################
 
@@ -48,5 +46,4 @@ print("Intercept is ", float(b0),"Coefficeint is ",float(b1))
 with open('slope_c.txt', 'w') as f:
          f.write("%f" % float(b1))
 
-y_pred=b0+b1*x
 
