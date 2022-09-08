@@ -15,26 +15,30 @@
 
 
 	# 1. BSE spectra using inversion solver is computed using the double-grid k points. 
-	# 2. Run the double nscf script before this.
+	# 2. Run the double nscf and gw script before this.
 
 		 #-------------------------------BSE + scissor Calculation: Inversion solver--------#
 
-       				cd $DIR/database
+				cd $DIR/database
 
-               				scp -r SAVE $PATH14
+        					scp -r SAVE $PATH14
 
-       				cd $PATH7/Report
+				cd $PATH7/Report
 
-               				scp -r r-output_rim_cut_optics_dipoles_bss_bse_em1s $PATH14
+        					scp -r r-output_rim_cut_optics_dipoles_bss_bse_em1s $PATH14
+
+
+				cd $PATH6/Report
+						scp -r slope_c.txt slope_v.txt $PATH14
 
 
        				cd $PATH14
-       					cd SAVE
-       					rm -rf ndb.QP
-       					cd ..
+       						cd SAVE
+       						rm -rf ndb.QP
+       				cd ..
 
               					yambo
-            					yambo -r -X s -optics b -kernel sex -Ksolver i -V all -F $sci_filename
+           					yambo -r -X s -optics b -kernel sex -Ksolver i -V all -F $sci_filename
 
 
 		#------------------------------COULOMB cut-off & RIM------------------------------#
@@ -105,9 +109,9 @@
                                                 awk -v v=$nc '{print $1 + v, $2}' 7 > 8
                                                 paste --delimiter='|' 6 8 > 9
                                                 sed -i 's/$/|/' 9
-                                                sed -i.bak '116s/.*//' $sci_filename
-                                                sed -i.bak '116 r 9' $sci_filename
-                                                sed -i.bak '116d' $sci_filename
+                                                sed -i.bak '116s/.*//' 							$sci_filename
+                                                sed -i.bak '116 r 9' 							$sci_filename
+                                                sed -i.bak '116d' 							$sci_filename
                                                 rm -rf 1 2 3 4 5 6 7 8 9  new_file.txt 1new_file.txt *.bak
 
                 #----------------------Includes photon energy range, W screening bands, writes exciton wavefunctions--------------------#
@@ -121,11 +125,17 @@
 
                                         	awk '/coarse-grid/ {print $6}' r-output_rim_cut_optics_dipoles_bss_bse_em1s > 1
                                         	sed '1d' 1 > 2
-                                        	sed '89d' $sci_filename > 3
-                                        	sed '88 r 2' 3 > 4
-                                        	sed -i '89s/$/\|1.000000\|1.000000\|/' 4 #Incomplete: The last two |c|v| values are to be exported from regression analysis.
-                                                rm -rf $sci_filename 1 2 3
-                                        	mv 4 $sci_filename
+                                        
+						paste --delimiter='|' slope_c.txt slope_v.txt > 3
+						sed -i 's/$/|/' 3		
+						paste --delimiter='|' 2 3 > 4
+
+                                                sed '89d' $sci_filename > 5
+                                                sed '88 r 4' 5 > 6
+						mv 6 $sci_filename
+						mv 4 scissor_correction	
+						rm -rf 1 2 3 5 
+
 
        						$MPIRUN_YAMBO yambo -F $sci_filename -J output -C Report
 
