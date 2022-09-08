@@ -1,3 +1,15 @@
+#!/bin/bash
+#PBS -u sitangshu
+#PBS -N sitangshu
+#PBS -q core160
+#PBS -o out.log
+#PBS -l nodes=4:ppn=40
+#PBS -j oe
+#PBS -V
+     cd $PBS_O_WORKDIR
+        module load compilers/intel/parallel_studio_xe_2018_update3_cluster_edition
+        module load compilers/gcc-7.5.0
+     cat $PBS_NODEFILE |uniq > nodes
 
 
 	mkdir GW_folder
@@ -14,7 +26,7 @@
 	cd $PATH3/$prefix.save
 				scp -r SAVE $PATH6
 
-       	cd $PATH6
+      	cd $PATH6
 				yambo	
 				yambo -r -x -d -k hartree -p p -g n -V all -F $gw_filename
 					
@@ -105,7 +117,26 @@
                                         rm -rf 1 2 3 4 5 6 7 8 9 10  new_file.txt 1new_file.txt *.bak
 
 					$MPIRUN_YAMBO yambo -F $gw_filename -J output -C Report
- 
+					
+
+			cd Report					 
+
+					sed '/#/d' o-output.qp > 1
+					awk '{print $3 "\t \t" $4}' 1 > 2
+					sort -n 2 >3 
+					awk '$2 !~ /^-/{print $0}' 3 > GW_positiveE.txt
+					awk '$2  ~ /^-/{print $0}' 3 > 4
+					sort -n 4 > GW_negativeE.txt
+					rm -rf 1 2 3 4
+					
+			cd $DIR
+					scp -r lin_reg.py $PATH6/Report
+					
+			cd $PATH6/Report
+
+					python lin_reg.py					
+
+
 
 
 			#-------------------------GW Band Structure Interpolation Calculations--------------#
