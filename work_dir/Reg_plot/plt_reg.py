@@ -14,6 +14,8 @@ plt.margins(0.1, 0.05)
 
 ax = plt.subplot(1,1,1)
 
+############### Valence plot ##################################
+
 with open('GW_negativeE.txt') as f:
          data = np.loadtxt(f, delimiter=None, dtype='float', skiprows=0, comments="#", usecols=None)
 x =  np.array(data[:,0])
