@@ -123,8 +123,8 @@
 			cd $PATH6/Report
 
 					python lin_reg.py					
-
-
+					scp -r *.txt $DIR/Reg_plot/.
+					
 
 
 			#-------------------------GW Band Structure Interpolation Calculations--------------#
