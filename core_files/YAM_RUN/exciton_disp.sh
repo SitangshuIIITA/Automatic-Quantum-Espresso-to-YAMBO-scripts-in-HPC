@@ -1,5 +1,5 @@
 
-
+ 
 	mkdir exc_disp 
 
       	PATH5=$DIR/band_structure
