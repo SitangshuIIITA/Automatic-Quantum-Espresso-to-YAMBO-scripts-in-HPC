@@ -1,7 +1,7 @@
 ## Automatic-Quantum-Espresso-to-YAMBO-scripts
 ### These are automatic set of scripts that does all the exciton-phonon driven optical absorption computations at one shot in a high performance cluster :)
 - Use this for only Yambo version 5.1.0, 5.1.1., as of now.
-- Right now this works only with 2D single layers. I will update for bulk also.
+- Right now this works only with single layers. I will update for bulk also.
 - You should be fully aware of recent QE and Yambo variables. 
 - Requires the use of SlepC module in Yambo and python-numpy. Install this if you don't have.
 
