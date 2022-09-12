@@ -27,6 +27,8 @@ cd ../QE_RUN
 
 
 cd ../YAM_RUN
+# In the following command runs, SlepC module for yambo is required. Install them if you dont have.
+
 #		sh yambo_dft_bnd_struc.sh				#calculates DFT band structure using yambo interpolator.
 
 #		sh hf.sh						#Hartree-Fock energy computation.
