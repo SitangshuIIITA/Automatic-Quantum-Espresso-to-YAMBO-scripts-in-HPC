@@ -15,7 +15,7 @@
 						sed -i 's/Degen_Step= 0.010000/Degen_Step= 0.00000/g' $prefix.ypp_AMPL.in
 
 
-               					mpiexec.hydra -ppn 32 -f $DIR/nodes -np 128 ypp -F $prefix.ypp_AMPL.in -J output
+               					$MPIRUN_YAMBO ypp -F $prefix.ypp_AMPL.in -J output
 						mv o-output.exc_qpt1_amplitude* o-output.exc_qpt1_weights* $PATH5/.	
 
 				#-----------------------------------Excitonic distribution plot------------------------------#
@@ -28,7 +28,7 @@
                					sed -i 's/States= "0 - 0"/States= "'"$exciton_states"'"/g' $prefix.ypp_WF.in
                					sed -i 's/Degen_Step= 0.010000/Degen_Step= 0.00000/g' $prefix.ypp_WF.in
 
-               					#mpiexec.hydra -ppn 32 -f $DIR/nodes -np 128 ypp -F $prefix.ypp_WF.in -J output
+               					#$MPIRUN_YAMBO ypp -F $prefix.ypp_WF.in -J output
 
 
 exit;
