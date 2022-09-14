@@ -10,7 +10,7 @@
 
 
 			scp -r $prefix.relax $PATH1
-			rm -rf $prefix.relax
+			#rm -rf $prefix.relax
 
 			cd $PATH1
 
