@@ -15,7 +15,7 @@
                                 mkdir "BSE-${line}$Kelvin"
 
 
-#       # 1. BSE spectra using slepC solver is computed at different temperatures. 
+#       # 1. BSE spectra using diagonalization solver is computed at different temperatures. 
 
 	#-----------------------------------------------BSE + GW + phonon Calculation: diago solver------------------------------#
 

@@ -22,7 +22,7 @@ source ./yambo_variables.sh
 set +a
 
 cd ..
-		sh QE_input_file.sh
+		sh header_input.sh
 
 cd ./QE_RUN	
 		sed -i '1i\\' *.sh
@@ -43,7 +43,9 @@ cd ..
 
 		sed  -i '1 r hpc_header.txt' ../work_dir/run.sh
                         sed -i -e "1d" ../work_dir/run.sh
-
+		
+		sed  -i '1 r hpc_header.txt' ../work_dir/input_relax.sh
+                        sed -i -e "1d" ../work_dir/input_relax.sh
 
 		scp -r $prefix.band_route $prefix.relax ../work_dir/.
 		rm -rf scp -r $prefix.band_route $prefix.relax 

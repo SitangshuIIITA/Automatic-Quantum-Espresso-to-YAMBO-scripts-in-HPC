@@ -24,9 +24,12 @@
 						
 						sed -i '/lspinorb/d' ./$prefix.scf.in
 						sed -i '/noncolin/d' ./$prefix.scf.in
+						sed -i.bak '/K_POINTS/q' $prefix.scf.in
+						sed -i.bak "\$a $kgrid_nonsoc $shifted_grid" $prefix.scf.in
+						rm -rf *.bak
 
 			$MPIRUN_PW $prefix.scf.in > scf.out
-  
+		
 exit;
 
 

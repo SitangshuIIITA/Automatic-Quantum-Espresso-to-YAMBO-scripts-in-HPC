@@ -15,7 +15,7 @@
                                 mkdir "BSE-${line}$Kelvin"
 
 
-#       # 1. BSE spectra using slepC solver is computed at different temperatures. 
+#       # 1. BSE + GW  spectra using slepC solver is computed at different temperatures. 
 
 	#-----------------------------------------------BSE + GW + phonon Calculation: SlepC solver------------------------------#
 

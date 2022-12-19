@@ -13,12 +13,16 @@
 	   cd $DIR/graph_data
 		mkdir BSE_GW_SLEPC
 
+	# Note: double-grid.ndb is inside the SAVE folder. But this is ineffective in BSE SlepC/diagonalization computation. However, do not delete this.
 
 			#-------------------------------BSE (+GW) Calculation: slepC solver-----------------------------------#
 				
-				cd $DIR/database
-                                        	scp -r SAVE $PATH7
-									
+				cd $PATH6
+						scp -r SAVE output $PATH7	
+
+				#cd $PATH7/output
+			
+				#		rm -rf ndb.QP ndb.HF_and_locXC	
 
     				cd $PATH7
               					yambo   
@@ -110,12 +114,16 @@
        			#----------------------Includes photon energy range, W screening bands, writes exciton wavefunctions--------------------#
 
        						sed -i '128s/0.00000 | 10.00000 |/0.00000 | 7.00000 |/g' 		$bse_filename
-       						sed -i 's/BEnSteps= 100/BEnSteps= 500/g' 				$bse_filename
+       						sed -i 's/BEnSteps= 100/BEnSteps= 1000/g' 				$bse_filename
 		       				sed -i 's/#WRbsWF/WRbsWF/g' 						$bse_filename
+                                                sed -i.bak -e '131d'                                                	$bse_filename
+                                                sed -i.bak "131i 0.0800000 | 0.0800000 |         eV"                	$bse_filename
 
-       			#-------------------------SLEPC solver: first 5 excitons----------------------------------------------------------------#
 
-						sed -i 's/BSSNEig=0/BSSNEig=5/g' 					$bse_filename
+
+       			#-------------------------SLEPC solver: first 15 excitons----------------------------------------------------------------#
+
+						sed -i 's/BSSNEig=0/BSSNEig=15/g' 					$bse_filename
 		       				sed -i 's/BSSEnTarget= 0.000000/BSSEnTarget= 2.00/g' 			$bse_filename
 
 		       				$MPIRUN_YAMBO yambo -F $bse_filename -J output -C Report

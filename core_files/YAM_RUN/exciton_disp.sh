@@ -10,11 +10,16 @@
 		mkdir exciton_disp_data
 
 
+	# Note: double-grid.ndb is inside the SAVE folder. But this is ineffective in BSE SlepC/diagonalization computation. However, do not delete this.
+
 
                      	#-------------------------------Exciton dispersion using BSE (+GW) Calculation: slepC solver-----------------------------------#
 
-                                cd $DIR/database
-                                                scp -r SAVE $PATH15
+                                cd $PATH7
+                                                scp -r SAVE output $PATH15
+
+				cd $PATH15/output
+						rm -rf ndb.BS*
 
                                 cd $PATH7/Report
 
@@ -124,14 +129,17 @@
 
 			#----------------------Includes photon energy range, W screening bands, writes exciton wavefunctions--------------------#
 
-                                                sed -i '128s/0.00000 | 10.00000 |/0.00000 | 7.00000 |/g'                $exc_disp_filename
-                                                sed -i 's/BEnSteps= 100/BEnSteps= 500/g'                                $exc_disp_filename
-                                                sed -i 's/#WRbsWF/WRbsWF/g'                                             $exc_disp_filename
+                                                sed -i '128s/0.00000 | 10.00000 |/0.00000 | 7.00000 |/g'                	$exc_disp_filename
+                                                sed -i 's/BEnSteps= 100/BEnSteps= 1000/g'                                	$exc_disp_filename
+                                                sed -i 's/#WRbsWF/WRbsWF/g'                                             	$exc_disp_filename
+						sed -i.bak -e '131d'                                                    	$exc_disp_filename
+                                                sed -i.bak "131i 0.0800000 | 0.0800000 |         eV"                    	$exc_disp_filename
 
-			#-------------------------SLEPC solver: first 5 excitons----------------------------------------------------------------#
 
-                                                sed -i 's/BSSNEig=0/BSSNEig=5/g'                                        $exc_disp_filename
-                                                sed -i 's/BSSEnTarget= 0.000000/BSSEnTarget= 2.00/g'                    $exc_disp_filename
+			#-------------------------SLEPC solver: first 15 excitons----------------------------------------------------------------#
+
+                                                sed -i 's/BSSNEig=0/BSSNEig=15/g'                                        	$exc_disp_filename
+                                                sed -i 's/BSSEnTarget= 0.000000/BSSEnTarget= 2.00/g'                    	$exc_disp_filename
 
 						
 					$MPIRUN_YAMBO yambo -F $exc_disp_filename -J output -C Report
@@ -145,27 +153,27 @@
 
        		#-------------------------Excitonic dispersion-------------------------------#
 
-       		cd $PATH15
+      		cd $PATH15
 
-                                       ypp -e i -F $prefix.ypp_exciton_disp.in
+                                       	ypp -e i -F $prefix.ypp_exciton_disp.in
 
-       						sed -i '18s/INTERP_mode= "NN"/INTERP_mode= "BOLTZ"/g'                          $prefix.ypp_exciton_disp.in
-                                                       sed -i '19s/INTERP_Shell_Fac= 20.00000 /INTERP_Shell_Fac= 50.00000 /g'  $prefix.ypp_exciton_disp.in
-                                                       sed -i '21s/BANDS_steps= 10/BANDS_steps= 100/g'                         $prefix.ypp_exciton_disp.in
-                                                       sed -i 's/States= "0 - 0"/States="'"$exciton_states"'"/g'               $prefix.ypp_exciton_disp.in
+       						       sed -i '18s/INTERP_mode= "NN"/INTERP_mode= "BOLTZ"/g'			$prefix.ypp_exciton_disp.in
+                                                       sed -i '19s/INTERP_Shell_Fac= 20.00000 /INTERP_Shell_Fac= 50.00000 /g'  	$prefix.ypp_exciton_disp.in
+                                                       sed -i '21s/BANDS_steps= 10/BANDS_steps= 100/g'                         	$prefix.ypp_exciton_disp.in
+                                                       sed -i 's/States= "0 - 0"/States="'"$exciton_states"'"/g'               	$prefix.ypp_exciton_disp.in
 
                                                        awk '/Grid dimensions/ {print $4*3}' r_setup > 1
                                                        kcountvar=$(cat 1)
                        #--The following 2 lines are showing interpolation error in ypp calculation.-------------#
-                                                       sed -i '26s/-1 |-1 |-1 |/'$kcountvar' |'$kcountvar' |1 |/g'             $prefix.ypp_exciton_disp.in
-                                                       sed -i '28s/#PrtDOS/PrtDOS/g'                                           $prefix.ypp_exciton_disp.in
+#                                                       sed -i '26s/-1 |-1 |-1 |/'$kcountvar' |'$kcountvar' |1 |/g'             $prefix.ypp_exciton_disp.in
+#                                                       sed -i '28s/#PrtDOS/PrtDOS/g'                                           $prefix.ypp_exciton_disp.in
                         
-       		                                scp -r $DIR/$prefix.band_route /.
+#       		                                scp -r $DIR/$prefix.band_route /.
 
-                                                       sed -i.bak '35s/.*//'                                                   $prefix.ypp_exciton_disp.in
+                                                       sed -i.bak '35s/.*//'                                                   	$prefix.ypp_exciton_disp.in
                                                        cat $prefix.band_route >> $prefix.ypp_exciton_disp.in
-                                                       sed -i.bak '35d'                                                        $prefix.ypp_exciton_disp.in
-                                                       sed -i.bak -e '$a%'                                                     $prefix.ypp_exciton_disp.in
+                                                       sed -i.bak '35d'                                                        	$prefix.ypp_exciton_disp.in
+                                                       sed -i.bak -e '$a%'                                                     	$prefix.ypp_exciton_disp.in
        						rm -rf 1 *.bak
 
 
@@ -179,4 +187,4 @@
 
 
 
-xit;
+exit;

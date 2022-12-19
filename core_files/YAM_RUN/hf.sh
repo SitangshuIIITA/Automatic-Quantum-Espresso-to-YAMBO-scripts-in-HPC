@@ -5,14 +5,17 @@
        	PATH3=$DIR/nscf
        	PATH5=$DIR/band_structure
        	PATH1=$DIR/HF_folder
+	PATH2=$DIR/database
 	
+	# Note: double-grid.ndb is inside the SAVE folder. But this is ineffective in HF computation. However, do not delete this.
+
 
 			#------------------------------HF Calculation-----------------------------#
 
 		cd $DIR/graph_data
 			mkdir HF_band_structure
 
-		cd $PATH3/$prefix.save
+		cd $PATH2
 
 			scp -r SAVE $PATH1
 
@@ -31,11 +34,16 @@
 					sed '27d' 5 > 6
 					mv 6 $hf_filename
 					rm -rf 1 2 3 4 5
+		
+					#sed -i.bak '15d'                                                                       	$hf_filename
+                                        #sed -i.bak "15i RandGvecW= 1 RL"                                                       	$hf_filename
 
-					sed -i 's/RandQpts=0/RandQpts=1000000/g' 						$hf_filename
-				        sed -i 's/RandGvec= 1/RandGvec= 100/g' 	 						$hf_filename
-					sed -i 's/CUTGeo= "none"/CUTGeo= "box z"/g'   						$hf_filename
-				
+					#sed -i.bak '14d'                                                       			$hf_filename
+                                        #sed -i.bak "14i RIM_W"                                                 			$hf_filename
+                                        sed -i 's/RandQpts=0/RandQpts=1000000/g'                              			$hf_filename
+                                        sed -i 's/RandGvec= 1/RandGvec= 100/g'                                 			$hf_filename
+                                        sed -i 's/CUTGeo= "none"/CUTGeo= "'"$slab"'"/g'                       			$hf_filename
+
 
 			#-------------------------CPU parallel structure---------------------------#
 

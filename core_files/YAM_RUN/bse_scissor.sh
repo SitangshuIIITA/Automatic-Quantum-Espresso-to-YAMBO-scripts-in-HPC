@@ -14,27 +14,30 @@
 		mkdir BSE_scissor_data
 
 
-	# 1. BSE spectra using inversion solver is computed using the double-grid k points. 
-	# 2. Run the double nscf and gw script before this.
+	# 1. BSE scissor spectra using inversion solver is computed using the double-grid k points. 
+	# 2. Run the double nscf, HF and gw and BSE+GW script before this.
 
 		 #-------------------------------BSE + scissor Calculation: Inversion solver--------#
 
-				cd $DIR/database
+				cd $PATH7
 
-        					scp -r SAVE $PATH14
+        					scp -r output SAVE $PATH14
 
 				cd $PATH7/Report
 
         					scp -r r-output_rim_cut_optics_dipoles_bss_bse_em1s $PATH14
 
 
-				cd $PATH6/Report
-						scp -r slope_c.txt slope_v.txt $PATH14
+       				cd $PATH6/Report
+       						scp -r slope_c.txt slope_v.txt $PATH14
 
 
-       				cd $PATH14
+      				cd $PATH14
        						cd SAVE
        						rm -rf ndb.QP
+				cd ../output
+						rm -rf ndb.BS*
+				
        				cd ..
 
               					yambo
@@ -117,8 +120,11 @@
                 #----------------------Includes photon energy range, W screening bands, writes exciton wavefunctions--------------------#
 
                                                 sed -i '128s/0.00000 | 10.00000 |/0.00000 | 7.00000 |/g'                $sci_filename
-                                                sed -i 's/BEnSteps= 100/BEnSteps= 500/g'                                $sci_filename
+                                                sed -i 's/BEnSteps= 100/BEnSteps= 1000/g'                                $sci_filename
                                                 sed -i 's/#WRbsWF/WRbsWF/g'                                             $sci_filename
+                                                sed -i.bak -e '131d'                                                	$sci_filename
+                                                sed -i.bak "131i 0.0850000 | 0.0580000 |         eV"                	$sci_filename
+
 
 
 		#--------------------Following lines are for scissor input--------------------------------------------------------------#
@@ -137,7 +143,7 @@
 						rm -rf 1 2 3 5 
 
 
-       						$MPIRUN_YAMBO yambo -F $sci_filename -J output -C Report
+      						$MPIRUN_YAMBO yambo -F $sci_filename -J output -C Report
 
 
        		        cd $PATH14/Report

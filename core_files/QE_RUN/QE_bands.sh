@@ -13,13 +13,13 @@
        					sed -i.bak '/nbnd/d' $prefix.bands.in
        					awk '/ntyp/{print;print"                                              nbnd = 100";next}1' $prefix.bands.in > 1
        					mv 1 $prefix.bands.in
-       					rm -rf 1
-					head -n -3 $prefix.bands.in > 1
+				
+					sed -i.bak '/K_POINTS/,$d' $prefix.bands.in
+	
+					#sed -i.bak '/K_POINTS/q' $prefix.bands.in
+					rm -rf 1 *.bak
+					scp -r $DIR/$prefix.band_route $PATH4/.
 
-			cd $DIR		
-					scp -r $prefix.band_route $PATH4/.
-
-			cd $PATH4
 
 					mv $prefix.band_route $prefix.k_points
 					sed -i.bak 's/|//g' $prefix.k_points
@@ -29,11 +29,11 @@
 					sed -i.bak '1i\K_POINTS {crystal_b}' 2
 					cat 2 >> 1
 
-					mv 1 $prefix.bands.in
+					cat 1 >> $prefix.bands.in
 					rm -rf 1 2 *.bak $prefix.k_points	
 
 			$MPIRUN_Bnds $prefix.bands.in > bands.out
-					
+       				
 
 					cat > $prefix.bandx.in << EOF
 &BANDS

@@ -5,14 +5,15 @@
       	PATH3=$DIR/nscf
        	PATH5=$DIR/band_structure
        	PATH6=$DIR/GW_folder
+	PATH7=$DIR/HF_folder
 	
 
 			#-------------------------------GW Calculation-----------------------------------#
 	cd $DIR/graph_data
                         mkdir GW_band_structure
 
-	cd $PATH3/$prefix.save
-				scp -r SAVE $PATH6
+	cd $PATH7
+				scp -r SAVE output $PATH6
 
       	cd $PATH6
 				yambo	
@@ -31,12 +32,9 @@
                                         mv 6 $gw_filename
                                         rm -rf 1 2 3 4 5
 
-					#sed -i.bak '15d'                                                       $gw_filename
-					#sed -i.bak "15i RIM_W"						       $gw_filename
-                                        sed -i 's/RandQpts=0/RandQpts=1000000/g'                               $gw_filename
-                                        sed -i 's/RandGvec= 1/RandGvec= 100/g'                                 $gw_filename
-					#sed -i 's/CUTwsGvec= 0.700000/CUTwsGvec= 20 RL/g'                      $gw_filename
-                                        sed -i 's/CUTGeo= "none"/CUTGeo= "box z"/g'                           $gw_filename
+                                        sed -i 's/RandQpts=0/RandQpts=1000000/g'                               	$gw_filename
+                                        sed -i 's/RandGvec= 1/RandGvec= 100/g'                                 	$gw_filename
+                                        sed -i 's/CUTGeo= "none"/CUTGeo= "'"$slab"'"/g'	                        $gw_filename
 
 			#------------------------------2D Material anisotropy-----------------------------#
 
@@ -147,13 +145,5 @@
 
 		cd $PATH5/work/FixSymm/SAVE/
 					rm -rf ndb.QP
-
-
-
-
-
-
-
-
 
 exit;

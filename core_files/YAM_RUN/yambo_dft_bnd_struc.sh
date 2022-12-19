@@ -1,4 +1,4 @@
-     
+
 
        mkdir band_structure graph_data
 
@@ -77,24 +77,24 @@
  #-------------This following lines converts rows with line break ups into multiple columns. Very essential for band structure from QE output-----------#
  #-----------------------------------However it takes a lot of time to convert. Use this if it is strongly required-------------------------------------#
 
-#                       	cd $PATH4
-#				scp -r Bandx.dat.gnu $PATH5/work/FixSymm
-#
-#			cd $PATH5/work/FixSymm
-#
-#				mv Bandx.dat.gnu $prefix.Bandx.dat.gnu
-#
-#			        sed -i 's/^ *//' $prefix.Bandx.dat.gnu
-#
-#                                sed -i '$ d' $prefix.Bandx.dat.gnu
-#
-#                                sed -E '/\S/!d;H;g;s/((\n\S+)(\s+)[^\n]*)(.*)\2\3(.*)$/\1\3\5\4/;h;$!d;x;s/.//' $prefix.Bandx.dat.gnu > 1
-#
-#                                mv 1 $prefix.Bandx.dat.gnu
-#
-#				scp -r $prefix.Bandx.dat.gnu $DIR/graph_data/DFT_band_structure/.
-#				
-#				rm -rf $prefix.Bandx.dat.gnu
-#
+                       	cd $PATH4
+				scp -r Bandx.dat.gnu $PATH5/work/FixSymm
+
+			cd $PATH5/work/FixSymm
+
+				mv Bandx.dat.gnu $prefix.Bandx.dat.gnu
+
+			        sed -i 's/^ *//' $prefix.Bandx.dat.gnu
+
+                                sed -i '$ d' $prefix.Bandx.dat.gnu
+
+                                sed -E '/\S/!d;H;g;s/((\n\S+)(\s+)[^\n]*)(.*)\2\3(.*)$/\1\3\5\4/;h;$!d;x;s/.//' $prefix.Bandx.dat.gnu > 1
+
+                                mv 1 $prefix.Bandx.dat.gnu
+
+				scp -r $prefix.Bandx.dat.gnu $DIR/graph_data/DFT_band_structure/.
+				
+				rm -rf $prefix.Bandx.dat.gnu
+
 
 exit;
