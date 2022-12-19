@@ -13,7 +13,7 @@
 Note: There are large number of file exchanges that is going to take place once you run the script. So, carefully read the following working procedures:</p>  
 
 1. Open the initialize.sh script and change lines 2-12 as per you declare your HPC headers. Note that this step is not equivalent of yambo initialization. Dont worry though, yambo initializations are taken care of. Also don't forget to load compiler modules in this script.
-2. Now copy these lines and open header_input.sh inside \core_files directory. Delete lines 5-15 and paste the headers here. Careful while chaning "$" to  \$. 
+2. Now copy these lines and open header_input.sh inside \core_files directory. Delete lines 5-15 and paste the headers here. Careful while chaning "$" to  \ $. 
 
 Save the file and close it.
 
