@@ -18,7 +18,7 @@
                                      ldisp = .true.
 				nq1=$NQ1, nq2=$NQ2, nq3=$NQ3,
 /
-EOF
+EOF 
 
 
 				scp -r $PATH2/$prefix.save ./.
