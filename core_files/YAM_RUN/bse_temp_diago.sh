@@ -7,7 +7,7 @@
 	cd $DIR/graph_data/
 
 		mkdir BSE_Tempreature_data_diago
-	
+	 
 	cd $PATH14
 
 		for line in $temp_value
