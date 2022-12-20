@@ -31,7 +31,7 @@
                                                 yambo
                                                 yambo -r -X s -optics b -kernel sex -Ksolver s -V all -F $exc_disp_filename
 
-
+ 
 		  	#------------------------------COULOMB cut-off & RIM------------------------------#
 
 
