@@ -30,7 +30,7 @@ with open('GW_positiveE.txt') as f:
 x =  np.array(data[:,0])
 y =  np.array(data[:,1])
 
-x_mean=np.mean(x)
+x_mean=np.mean(x) 
 y_mean=np.mean(y)
 print("Mean for x value is",x_mean,"and mean for y values is",y_mean)
 
