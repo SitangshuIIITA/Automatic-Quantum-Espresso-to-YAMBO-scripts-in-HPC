@@ -48,7 +48,7 @@
 
        						sed -i 's/DBsIOoff= "none"/DBsIOoff= "BS"/g' 				$bse_filename	
        						sed -i 's/DBsFRAGpm= "none"/DBsFRAGpm= "+BS"/g' 			$bse_filename
-	             			
+	             			 
 
 
 			#------------------------------CPU parallel structure-----------------------------#
