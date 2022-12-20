@@ -23,7 +23,7 @@ vxcrlvecs="60 Ry"       # This value is converged at the Hartree-Fock Level
 slab="box z"		# HF/GW/BSE RIM cut	
 #---------------------------------------------------#
 
-
+ 
 # Converge the followings for GW:
 #---------------------------------------------------#
 ngsblkp="20 Ry"         # Converge this value here. This is response block size. 
