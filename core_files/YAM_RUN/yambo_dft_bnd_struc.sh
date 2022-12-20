@@ -21,7 +21,7 @@
 					p2y
 			       		scp -r SAVE $PATH5/work
 
-			cd $PATH5/work
+			cd $PATH5/work 
 				 	yambo
 				 	ypp -y -F rmv_symm.in
 				 	sed -i 's/#RmAllSymm/RmAllSymm/g' $PATH5/work/rmv_symm.in
