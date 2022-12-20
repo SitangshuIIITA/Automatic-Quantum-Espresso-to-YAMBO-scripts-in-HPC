@@ -134,7 +134,7 @@
        						mv o-output.jdos_q1_slepc_bse $prefix.BSE_GW.o-output.jdos_q1_slepc_bse
        						scp -r $prefix.BSE_GW.o-output.alpha_q1_slepc_bse $prefix.BSE_GW.o-output.jdos_q1_slepc_bse $DIR/graph_data/BSE_GW_SLEPC
 
-       			cd ..
+       			cd .. 
               				    	ypp -J output -e s 1
 
                					mv o-output.exc_qpt1_I_sorted $prefix.BSE_GW.o-output.exc_qpt1_I_sorted
