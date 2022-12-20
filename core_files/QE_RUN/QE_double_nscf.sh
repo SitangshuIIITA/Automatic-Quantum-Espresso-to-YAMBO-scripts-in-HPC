@@ -26,7 +26,7 @@
 						$MPIRUN_nscf $prefix.nscf_dg.in > $prefix.nscf_dg.out
 
 			#-------------------------------------Making double grid--------------------------------------#
-
+ 
       				cd $PATH8/$prefix.save
 					      	p2y
 				      		scp -r SAVE $DIR/database_double/.
