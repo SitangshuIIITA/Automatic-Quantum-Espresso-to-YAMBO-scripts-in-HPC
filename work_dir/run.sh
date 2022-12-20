@@ -2,7 +2,7 @@
 
 # Note: How to run:
 
-# 1. Run the script input_relax.sh below by uncommenting to generate the input script. Once ran, comment it and go to the QE and Yambo steps.:
+# 1. Run this script run.sh by uncommenting input_relax.sh line below to generate the input script. Once the input is generated, comment it and go to the QE and Yambo steps.:
 # 2. In the Yambo BSE command runs, SlepC module for yambo is required. Install them if you dont have.
 # 3. In BSE, the Slepc solver includes firt 15 excitons.
 
