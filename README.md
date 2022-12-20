@@ -22,7 +22,7 @@ This section will take care of "relax", "electronic stabilities", "scf" (both wi
 
 1. In the input_relax.sh file inside \work_dir, modify lines 7-52 as per your input. You may add other QE flags also. Pay attention to the variables inside \core_file/QE_VAR/QE_variables.sh script.
 2. Scroll down and change line 67-70. Dont delete "|". Maintain the format.
-
+ 
 #### Assigning environmental variables for HPC processors & Quantum Espresso:
 
 1. Open QE_variables.sh file inside /core_files/QE_VAR directory.
