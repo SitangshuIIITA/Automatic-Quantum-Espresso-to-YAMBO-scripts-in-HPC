@@ -252,7 +252,7 @@
 					scp -r $prefix.${line}$Kelvin.eliash_diff_direct.txt $prefix.${line}$Kelvin.eliash_diff_indirect.txt $DIR/graph_data/Eliash_data/.
 						
   				cd ..
-			done	
+			done	 
 
 
 exit;
