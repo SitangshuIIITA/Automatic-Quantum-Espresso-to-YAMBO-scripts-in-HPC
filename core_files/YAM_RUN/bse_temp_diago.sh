@@ -24,7 +24,7 @@
 
 						#scp -r $PATH7/Report/r-output_rim_cut_optics_dipoles_bss_bse_em1s ./BSE-${line}$Kelvin/.
 
-
+ 
                                        cd BSE-${line}$Kelvin
                                                cd SAVE
                                                rm -rf ndb.QP
