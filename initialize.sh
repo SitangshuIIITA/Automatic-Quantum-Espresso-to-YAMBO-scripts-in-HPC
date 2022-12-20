@@ -27,7 +27,7 @@ cd ..
 cd ./QE_RUN	
 		sed -i '1i\\' *.sh
 cd ..
-
+ 
 cd ./YAM_RUN
 		sed -i '1i\\' *.sh
 cd ..
