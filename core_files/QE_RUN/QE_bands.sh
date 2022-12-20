@@ -1,7 +1,7 @@
 
  
        PATH4=$DIR/bands
-	
+	 
 
 
 			#------------------------------------QE Band Structure Calculations-------------------------#
