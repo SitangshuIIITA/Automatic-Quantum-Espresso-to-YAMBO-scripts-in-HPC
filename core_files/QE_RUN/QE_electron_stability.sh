@@ -25,7 +25,7 @@ cat > ${line}.relax << EOF
 
 
 /
-&SYSTEM
+&SYSTEM 
   				   ibrav     = 1,
   				   celldm(1) = 30.0, 
   				   nat       = 1, 
