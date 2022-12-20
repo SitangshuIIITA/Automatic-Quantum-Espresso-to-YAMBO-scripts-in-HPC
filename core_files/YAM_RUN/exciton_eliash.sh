@@ -10,7 +10,7 @@
 
 	
 
-
+ 
 	cd $PATH14
 
 		#---------Exciton Intensity sorting: all positive energies and intensities between & including 0.3 and 1 -----------------------#
