@@ -4,7 +4,7 @@
 
 # 1. Run this script run.sh by uncommenting input_relax.sh line below to generate the input script. Once the input is generated, comment it and go to the QE and Yambo shell script lines below. Uncomment (one by one or all of them) them and run this script again:
 # 2. In the Yambo BSE command runs, SlepC module for yambo is required. Install them if you dont have.
-# 3. In BSE, the Slepc solver includes firt 15 excitons.
+# 3. In BSE, the Slepc solver includes first 15 excitons.
 
 cd ../core_files/QE_VAR
 set -a
