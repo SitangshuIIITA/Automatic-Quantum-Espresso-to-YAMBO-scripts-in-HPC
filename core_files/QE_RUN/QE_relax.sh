@@ -15,7 +15,7 @@
 			cd $PATH1
 
 		$MPIRUN_PW $prefix.relax > relax.out
-
+ 
 
 		               	awk '/Begin final coordinates/,/End final coordinates/' relax.out | awk 'NR > 3 { print }' | awk 'NR>2 {print last} {last=$0}' > 1
 		               	tail -3 $prefix.relax >> 1
