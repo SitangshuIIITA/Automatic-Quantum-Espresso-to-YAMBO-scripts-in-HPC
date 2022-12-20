@@ -27,7 +27,7 @@
 
         					scp -r r-output_rim_cut_optics_dipoles_bss_bse_em1s $PATH14
 
-
+ 
        				cd $PATH6/Report
        						scp -r slope_c.txt slope_v.txt $PATH14
 
