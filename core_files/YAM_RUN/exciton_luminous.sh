@@ -5,7 +5,7 @@
      	PATH15=$DIR/exc_disp	
       
 	cd $DIR/graph_data/
-		mkdir exciton_disp_data
+		mkdir exciton_luminious
 
 
 	# Note: Run the BSE for excitons with q/=0 ible-grid.ndb is inside the SAVE folder. But this is ineffective in BSE SlepC/diagonalization computation. However, do not delete this.
