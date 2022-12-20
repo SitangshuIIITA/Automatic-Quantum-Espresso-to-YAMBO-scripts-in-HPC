@@ -30,7 +30,7 @@
 
 			$MPIRUN_PW $prefix.scf.in > scf.out
 		
-exit;
+exit; 
 
 
 
