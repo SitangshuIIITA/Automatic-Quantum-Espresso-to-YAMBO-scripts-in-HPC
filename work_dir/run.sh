@@ -23,7 +23,7 @@ source ./yambo_variables.sh
 set +a
 
 
-cd ../QE_RUN
+cd ../QE_RUN 
 
 # Run sequentially or at one shot, the following lines :
 
