@@ -19,7 +19,7 @@
 				yambo	
 				yambo -r -x -d -k hartree -p p -g n -V all -F $gw_filename
 					
-				
+				 
 			#------------------------------COULOMB cut-off & RIM------------------------------#
 
 	
