@@ -31,7 +31,7 @@ PH_RUN_phon="$PARALLEL -np 96 $QE_PATH/ph.x -npool 2"	#k-point (npool) paralleli
 PH_RUN_dvscf="$PARALLEL -np 36 $QE_PATH/ph.x"	#k-point (npool) parallelization is not supported.
 MATDYN_RUN="$PARALLEL -np 36 $QE_PATH/matdyn.x"
 Q2R_RUN="$PARALLEL -np 36 $QE_PATH/q2r.x"
-
+ 
 
 #----------3. DFT input prefix----------------------------------------------------#
 prefix=mos2
