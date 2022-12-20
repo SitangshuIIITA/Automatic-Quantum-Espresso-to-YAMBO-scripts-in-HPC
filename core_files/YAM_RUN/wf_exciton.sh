@@ -30,5 +30,5 @@
 
                					#$MPIRUN_YAMBO ypp -F $prefix.ypp_WF.in -J output
 
-
+ 
 exit;
