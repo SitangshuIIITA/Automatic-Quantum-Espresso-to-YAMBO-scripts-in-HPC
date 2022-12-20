@@ -12,7 +12,7 @@
 
 
       		cd $PATH15
-
+ 
                                        	ypp -e i -F $prefix.ypp_exciton_disp.in
 
        						       sed -i '18s/INTERP_mode= "NN"/INTERP_mode= "BOLTZ"/g'			$prefix.ypp_exciton_disp.in
