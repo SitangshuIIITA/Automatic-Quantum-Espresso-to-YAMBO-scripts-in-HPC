@@ -15,7 +15,7 @@
 		for line in $temp_value
                         do
                                 mkdir "BSE-${line}$Kelvin"
-
+ 
 
 #       # 1. BSE spectra using inversion solver is computed using the double-grid k points. 
 #       # 2. Run the double nscf script before this.
