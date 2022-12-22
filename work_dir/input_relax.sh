@@ -30,7 +30,7 @@ cat > $prefix.relax << EOF
                                           conv_thr = 1e-10
 				  electron_maxstep = 200
 /&end
-/
+/ 
  
 &ions
                                       ion_dynamics = 'bfgs'
