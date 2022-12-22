@@ -15,7 +15,7 @@ cat > $prefix.relax << EOF
 /&end
 
 &SYSTEM
-                                           ecutwfc = 90
+                                           ecutwfc = $ecutwfc
                                        occupations = 'fixed'
                                          celldm(1) = 5.9722904441
                                              ibrav = 4
