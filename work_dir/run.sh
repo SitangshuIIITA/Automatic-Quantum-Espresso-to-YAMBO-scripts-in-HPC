@@ -29,7 +29,7 @@ cd ../QE_RUN
 
 #		sh QE_relax.sh						# calculates energy/geometry minimization/relax.
 
-#		sh QE_electron_stability.sh				# calculates enthaly of the system
+#		sh QE_electron_stability.sh				# calculates formation energy of the system
 
 #		sh QE_scf.sh						# calculates scf (both with spin and no-spin)	
 
