@@ -73,6 +73,8 @@ cd ../YAM_RUN
 
 #		sh bse_temp_slepc.sh                                    # BSE Temperature calculation (loop) using slepC solver with merged GW+elph database.
 	
+#		sh exciton_luminous.sh                                  # Phonon assisted exciton PL spectra calculation.
+
 
 cd ..
 #		rm -rf count
