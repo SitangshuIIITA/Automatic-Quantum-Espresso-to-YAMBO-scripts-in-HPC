@@ -49,6 +49,11 @@ exciton_states="1 - 15"  #This is first five exciton states whose dispersion dia
 temp_value="0 300"
 Kelvin="K"
 
+#-----Exciton Phonon Luminiousity-------------------#
+
+dos_broad_exc_phon=0.002                                # The broadening is in eV
+dos_energy_range="-1.000000 |1.000000 |         eV"     #Energy steps
+
 
 #------------ File names --------------------#
 hf_filename=$prefix.yambo_hf_input.in
