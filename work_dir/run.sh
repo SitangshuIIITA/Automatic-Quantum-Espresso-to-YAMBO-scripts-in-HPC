@@ -39,7 +39,7 @@ cd ../QE_RUN
 
 #		sh QE_double_nscf.sh					# calculates nscf on denser grid.
 
-#		sh QE_phon_disp.sh					# calculates phonon dispersion on regilar grid
+#		sh QE_phon_disp.sh					# calculates phonon dispersion on regilar grid. Won't run unless bands are done properly.
 
 
 	
