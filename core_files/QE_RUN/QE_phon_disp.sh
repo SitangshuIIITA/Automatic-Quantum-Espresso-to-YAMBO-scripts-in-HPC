@@ -8,7 +8,7 @@
 
 
 	cd $PATH12
-                cat > $prefix.phonon.in << EOF
+cat > $prefix.phonon.in << EOF
 &inputph
                                 verbosity  = 'high'
                                     tr2_ph = $TRN_PH
@@ -18,23 +18,20 @@
                                      ldisp = .true.
 				nq1=$NQ1, nq2=$NQ2, nq3=$NQ3,
 /
-EOF 
-
-
+EOF
 				scp -r $PATH2/$prefix.save ./.
 				echo "Running PHONON ... "
 				$PH_DISP_RUN -inp $prefix.phonon.in > output_phonon
-
-
-				 cat > $prefix.q2r.in << EOF
+				
+cat > $prefix.q2r.in << EOF
 &input
                                                 zasr='crystal',
                                                 flfrc='$prefix.fc',
                                                 fildyn='$prefix.dyn',
                                                 loto_2d = .true.,
-/
-EOF
-                                 $Q2R_DISP_RUN -inp $prefix.q2r.in > q2r.out
+/EOF
+
+				$Q2R_DISP_RUN -inp $prefix.q2r.in > q2r.out
 
 
 				 scp -r $DIR/bands/bands.out ./.
