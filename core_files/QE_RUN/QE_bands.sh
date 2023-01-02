@@ -33,27 +33,23 @@
 					rm -rf 1 2 *.bak $prefix.k_points	
 
 			$MPIRUN_Bnds $prefix.bands.in > bands.out
-       				
-
-					cat > $prefix.bandx.in << EOF
+			
+cat > $prefix.bandx.in << EOF
 &BANDS
   						prefix="$prefix"
   						outdir="."
 	  					filband="Bandx.dat"
-/
-EOF
-
+/EOF
 			$MPIRUN_Bndx $prefix.bandx.in > bandx.out				
 
 
-					cat > $prefix.projwfc.in << EOF
+cat > $prefix.projwfc.in << EOF
 &projwfc
 						prefix = '$prefix'
 						ngauss=0, degauss=0.016748
 						DeltaE = 0.030000
 						kresolveddos=.true.
-/
-EOF
+/EOF
 
 			$MPIRUN_proj $prefix.projwfc.in > projwfc.out
 
