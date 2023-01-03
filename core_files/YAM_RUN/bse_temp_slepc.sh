@@ -142,7 +142,7 @@
 
 		#-------------------------SLEPC solver: first 5 excitons----------------------------------------------------------------#
 
-                                                sed -i 's/BSSNEig=0/BSSNEig=5/g'                                        $prefix.BSE-${line}$Kelvin.slpc.in
+                                                sed -i 's/BSSNEig=0/BSSNEig='$bssneig'/g'                               $prefix.BSE-${line}$Kelvin.slpc.in
                                                 sed -i 's/BSSEnTarget= 0.000000/BSSEnTarget= 2.00/g'                    $prefix.BSE-${line}$Kelvin.slpc.in
 
 
