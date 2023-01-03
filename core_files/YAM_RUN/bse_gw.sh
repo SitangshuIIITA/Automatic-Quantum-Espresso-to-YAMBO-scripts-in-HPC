@@ -121,9 +121,9 @@
 
 
 
-       			#-------------------------SLEPC solver: first 15 excitons----------------------------------------------------------------#
+       			#-------------------------SLEPC solver: first n excitons----------------------------------------------------------------#
 
-						sed -i 's/BSSNEig=0/BSSNEig=15/g' 					$bse_filename
+						sed -i 's/BSSNEig=0/BSSNEig='$bssneig'/g'				$bse_filename
 		       				sed -i 's/BSSEnTarget= 0.000000/BSSEnTarget= 2.00/g' 			$bse_filename
 
 		       				$MPIRUN_YAMBO yambo -F $bse_filename -J output -C Report
