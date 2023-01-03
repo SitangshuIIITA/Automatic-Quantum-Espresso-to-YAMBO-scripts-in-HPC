@@ -43,7 +43,8 @@ nc="3"   #This is the no. of lowest conduction bands
 nv="3"   #This is the no. of highest valence bands
 
 #-----------Exciton dispersion states---------------#
-exciton_states="1 - 15"  #This is first five exciton states whose dispersion diagram will be plotted along the BZ. MIND THE GAPS.
+exciton_states="1 - 5"  #This is first five exciton states whose dispersion diagram will be plotted along the BZ. MIND THE GAPS.
+bssneig="5"             #This is the total number of lowest excitons which will be evaluated in BSE/exciton dispersion using SlepC. See exciton_states above.
 
 #-----Temperature file names------------------------#
 temp_value="0 300"
