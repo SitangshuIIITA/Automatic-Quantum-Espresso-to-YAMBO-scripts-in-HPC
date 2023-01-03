@@ -136,9 +136,9 @@
                                                 sed -i.bak "131i 0.0800000 | 0.0800000 |         eV"                    	$exc_disp_filename
 
 
-			#-------------------------SLEPC solver: first 15 excitons----------------------------------------------------------------#
+			#-------------------------SLEPC solver: first n excitons----------------------------------------------------------------#
 
-                                                sed -i 's/BSSNEig=0/BSSNEig=15/g'                                        	$exc_disp_filename
+                                                sed -i 's/BSSNEig=0/BSSNEig='$bssneig'/g'                                     	$exc_disp_filename
                                                 sed -i 's/BSSEnTarget= 0.000000/BSSEnTarget= 2.00/g'                    	$exc_disp_filename
 
 						
