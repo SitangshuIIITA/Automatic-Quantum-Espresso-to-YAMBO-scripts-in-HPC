@@ -168,7 +168,7 @@
 #                                                       sed -i '26s/-1 |-1 |-1 |/'$kcountvar' |'$kcountvar' |1 |/g'             $prefix.ypp_exciton_disp.in
 #                                                       sed -i '28s/#PrtDOS/PrtDOS/g'                                           $prefix.ypp_exciton_disp.in
                         
-#       		                                scp -r $DIR/$prefix.band_route /.
+       		                                       scp -r $DIR/$prefix.band_route /.
 
                                                        sed -i.bak '35s/.*//'                                                   	$prefix.ypp_exciton_disp.in
                                                        cat $prefix.band_route >> $prefix.ypp_exciton_disp.in
