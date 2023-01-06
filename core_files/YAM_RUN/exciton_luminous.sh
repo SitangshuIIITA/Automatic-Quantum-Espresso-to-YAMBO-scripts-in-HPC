@@ -28,7 +28,7 @@
 
                                         ypp_ph -F $prefix.ypp.Lumin-${line}$Kelvin.in -J output
 
-
+                                        mv o-output.excitons_ph_dos o-output.excitons_ph_dos.${line}$Kelvin
                         done
 
 
