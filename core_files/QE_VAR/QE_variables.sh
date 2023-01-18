@@ -35,7 +35,7 @@ Q2R_RUN="$PARALLEL -np 36 $QE_PATH/q2r.x"
 
 #----------3. DFT input prefix----------------------------------------------------#
 prefix=mos2
-
+ibrav=4
 ecutwfc=60 	#Kinetic cut-off for upf pseudo.
 
 kgrid_nonsoc="12 12 1"  #kpoint grid in absence of SOC for nonsoc-scf, phonon dispersion & elph.
