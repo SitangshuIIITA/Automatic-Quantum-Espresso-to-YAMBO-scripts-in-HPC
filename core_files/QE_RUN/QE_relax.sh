@@ -22,7 +22,7 @@
 		               	awk '/&CONTROL/,/ATOMIC_POSITIONS/' $prefix.relax | awk 'NR>1 {print last} {last=$0}' >> 2
 		               	cat 1 >> 2
 		               	sed -i 's/vc-relax/scf/g' 2
-		               	sed -i 's/ibrav = 4/ibrav = 0/g' 2
+		               	sed -i 's/ibrav = '$ibrav'/ibrav = 0/g' 2
 				awk '/ntyp/{print;print "                                  force_symmorphic = .TRUE.";next}1' 2 > 3
 				awk '/ntyp/{print;print "                                          lspinorb = .TRUE.";next}1' 3 > 4
 				awk '/ntyp/{print;print "                                          noncolin = .TRUE.";next}1' 4 > 5
