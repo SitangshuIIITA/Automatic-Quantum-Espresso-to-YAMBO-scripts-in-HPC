@@ -18,7 +18,7 @@ cat > $prefix.relax << EOF
                                            ecutwfc = $ecutwfc
                                        occupations = 'fixed'
                                          celldm(1) = 5.9722904441
-                                             ibrav = 4
+                                             ibrav = $ibrav
                                          celldm(3) = 6.6135615745
                                                nat = 3
                                               ntyp = 2
