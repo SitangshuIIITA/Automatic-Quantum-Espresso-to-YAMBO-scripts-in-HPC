@@ -39,7 +39,8 @@ cat > $prefix.bandx.in << EOF
   						prefix="$prefix"
   						outdir="."
 	  					filband="Bandx.dat"
-/EOF
+/
+EOF
 			$MPIRUN_Bndx $prefix.bandx.in > bandx.out				
 
 
@@ -49,7 +50,8 @@ cat > $prefix.projwfc.in << EOF
 						ngauss=0, degauss=0.016748
 						DeltaE = 0.030000
 						kresolveddos=.true.
-/EOF
+/
+EOF
 
 			$MPIRUN_proj $prefix.projwfc.in > projwfc.out
 
